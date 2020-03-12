@@ -10,12 +10,9 @@ public class Main {
         lista.add(4);
         lista.add(2);
         lista.add(3);
-        int n = 2019;
-        while(n>0){
-            System.out.println(n%10);
-            n = n/10;
-        }
-        //System.out.println(nroDigit(1234));
+        int n = 20129;
+
+        System.out.println(nroDigit(n));
     }
 
     //exercicio 1
@@ -88,7 +85,8 @@ public class Main {
     }
 
     //exercicio 10
-    public static void nroDigit(int n){
-
+    public static int nroDigit(int n){
+        if(n<=0) return 0;
+        return nroDigit(n/10) + 1;
     }
 }
